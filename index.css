@@ -1,0 +1,44 @@
+ul {
+  list-style: none;
+  padding-left: 2.2em;
+}
+
+li {
+  margin: 20pt 0;
+  position: relative;
+}
+
+li::before {
+  content: "・";
+  position: absolute;
+  left: -1.2em;
+}
+
+
+
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  /* border: 1px solid #666; */
+  padding: 0 10px;
+}
+
+.col-endash {
+  padding: 0 0px;
+}
+
+
+
+dt {
+    font-weight: bold;
+}
+
+.items dt::before {
+  content: "・";
+}
+
+dd {
+    margin-bottom: 20pt;
+}

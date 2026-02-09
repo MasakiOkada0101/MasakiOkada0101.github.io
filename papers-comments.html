@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <!-- <meta name="viewport" content="width=device-width" /> -->
+        <link href="index.css" rel="stylesheet" />
+        <title>論文のコメント</title>
+    </head>
+    <body>
+        <h1>論文のコメント</h1>
+        <p>
+            <a href="https://member.ipmu.jp/yuji.tachikawa/comments.html">Tさん</a>に倣い、自分が関わった各論文にコメントを書きますが、
+            思い出を残すために書いているだけなので、ここには有益な情報は無いでしょう......<br>
+            また、数年前のことを思い出しながら書いたものもあるので、不正確な内容があったらすみません。<br>
+            （ちなみに素粒子分野では、共著者はalphabetical orderに並べる習慣になっていて、first authorの概念は無いとされています。<br>
+            したがって私の名前が最初に並んでいたとしても、それは私の貢献度が一番大きかったという意味ではありません。）
+        </p>
+
+        <dl class="items">
+            <dt>
+                [<a href="https://arxiv.org/abs/2509.02989">2509.02989</a>] On the Symmetry of Odd Leech Lattice CFT
+            </dt>
+            <dd>
+                本郷素論に所属している学部同期のS君が、奨学金のプログラムか何かでTさんのところに研究しに来るというので、せっかくなら共同研究できたらいいね、という話になり、TさんとYさんがやっていたプロジェクトに加えていただいた。
+                （bosonicな1+1次元理論の）有限群対称性は、anomaly 3-cocycleのcohomology classがtrivialならnon-anomalousだという話は有名だが、実はこの対称性でorbifoldをとったりゲージ化したりした理論の分配関数を計算するには、anomaly 3-cocycleそのものの値が必要になってくる。
+                もっと言うと、fermionicな理論ではfusion operatorが反交換するかもしれないので、通常のcohomologyではなくsupercohomologyというのを考える必要がある。
+                いずれにせよ、抽象的には<a href="https://arxiv.org/abs/1409.5436">Else&ndash;Nayak</a>（latticeの場合は<a href="https://arxiv.org/abs/2308.05151">Sahandさんの論文</a>が分かりやすい）の方法で計算できることになっているので、fermionicな理論のU(1)対称性の有限部分群の場合にやってみようというのがこの論文。
+                問題を解きほぐすと、一番難しいのはwinding numberがnon-zeroのf:S^1→U(1)によってposition-dependentなU(1)作用をimplementするsymmetry operator U(f)たちの交換関係（commutator）を求めるところで（最初のうちは私がこの問題意識を理解しておらず、TさんとYさんが議論済みのことを色々と考えてしまった）、
+                そもそもU(f)をwell-definedに定義すること自体が難しい。
+                S君はもともとBF理論をやっていた関係で似たようなことを考えた経験があるらしく、S^1をパッチに分ければU(f)をwell-definedに定義できるはずというアイデアを出して、実際に計算してくれた（この論文のSection 2.3とAppendix A）。
+                一方Tさんは、commutatorが満たすべき条件をいくつか課せば、commutatorが一意に決まるのではないかというアイデアだった（この論文のSection 2.4とAppendix B）。
+                私は最初、commutatorみたいな連続的な量がいくつか条件を課しただけで一意に導出できるとは思えなかったので、Yさんと一緒に条件を満たすcommutatorの式をguessする方針で進めて、実際に正しい式を得てはいたのだが、
+                ある日、外出中の待ち時間や移動時間に考えていたら、一意に導出できることが示せてしまって、Tさんの慧眼にはいつも驚いてしまう。
+                ただしこの式はPressley&ndash;Segalの本"Loop Groups"に既に書いてあることが後で分かったりしたので、新奇性の主張には気を遣う必要があった。
+                また、TさんとYさんがdifferential cohomologyなどのもっと抽象的な道具を使ってcommutatorを決定する方法も書いてくださって、こちらの方法では4次元SU(2)対称性の場合にもwinding numberがoddなsymmetry operatorはfermionicと言えたりする。
+                同期の友人と共著を書けたのも嬉しかったし、（私はともかく）共著者の能力がうまく合わさって完成した感じがあったのも良かった。
+                前の論文(<a href="#2412.19430">2412.19430</a>)で勉強した群の拡大の知識が役立った（上のcommutatorを求める問題は、loop group LU(1)のU(1)による中心拡大を求める問題とも言える）のも良かった。
+            </dd>
+
+            <dt id="2412.19430">
+                [<a href="https://arxiv.org/abs/2412.19430">2412.19430</a>] On the Symmetry of Odd Leech Lattice CFT
+            </dt>
+            <dd>
+                2024年の年始から、TさんとK3 Mathieu moonshineについて色々と考えていたが、あまり上手くいかない（moonshineはとても魅力的な問題なのだが、すぐにできるアイデアはやり尽くされている感じがあって、それでも解決していないので難しい）。
+                Mathieu群M24はGolay codeとの繋がりが深いわけだが、有名なmonstrous moonshineの基盤になっているLeech latticeをGolay codeから構成するときは、意外とcodeからlatticeを作る方法としてはtwistedな構成を使うので、他の構成で作ったlatticeは使えないのかなあ、とか、
+                以前から興味があった川畑さんや矢萩君がやっている<a href="https://arxiv.org/abs/2308.12592">code CFT</a>の話は使えないのかなあ、とか考えていたところ、
+                <a href="https://arxiv.org/abs/1507.00004">Benjamin&ndash;Dyer&ndash;Fitzpatrick&ndash;Kachruの論文</a>を見つける。
+                この論文は、index 4のN=2 extremal elliptic genusと呼ばれるweak Jacobi formのN=2 superconformal algebra (SCA)の既約指標への分解にM24の表現次元が現れることを指摘し、
+                このweak Jacobi formをelliptic genusにもつN=2 SCFTを構成し、さらにそれはM23対称性をもつことを主張している。
+                （K3 CFTのelliptic genusがindex 1のN=2 extremal elliptic genus（の2倍）であることを考えると、これはK3 Mathieu moonshineの類題と言えなくもない。）
+                M24ではなくM23しかないのは、N=2 SCAのU(1) currentをM24の作用で保たれるように選べないことが問題であるようだった。
+                しかし彼らの構成したSCFTは、<a href="https://arxiv.org/abs/hep-th/9410029">Dolan&ndash;Goddard&ndash;Montague</a>のreflection Z2とshift Z2が同値という議論を使うと、odd Leech lattice CFTと同値なはずで、
+                さらに<a href="https://arxiv.org/abs/1811.00589">Gaiotto&ndash;Johnson-Freydの論文</a>を読むと、odd Leech latticeをternary codeから構成すれば、座標のpermutationで不変なU(1) currentを取れるはずだから、
+                これでM24対称性をもつN=2 SCFTを構成できて解決だ、と早とちりし、何人かに言って回ってしまったのだが、
+                実際にはternary codeから構成したときのodd Leech latticeのM24対称性は、Golay codeから構成したときとは違って座標のpermutationとしては見えないので、そのU(1) currentはM24不変ではないというオチだった。
+                （まあそんなに簡単だったらGaiottoかJohnson-Freydが気づいてるはずなので、さもありなん、という感じではある。）
+                とはいえせっかく具体的なモデルがあるのだから、M23不変なOPEの構造くらいは見ておこう、と計算してみるが、どうも上手くいかない。
+                そこでlattice CFTの頂点作用素はcocycle factorという補正項を加えて作らなければならないことを思い出し、勉強して再度計算してみるが、それでも上手くいかない。
+                よく考えたらcocycle factorのせいで、latticeがM24対称性をもっていてもlattice CFTがM24対称性をもっているとは限らないということになり、
+                Frenkel&ndash;Lepowsky&ndash;Meurmanの本を読んで、latticeの自己同型群はlattice VOAの自己同型群に群の拡大としてしかinheritされないことを知る。
+                そういうわけで、odd Leech latticeの場合にこの拡大がsplitしないことを示して、lattice CFTはM24対称性をもたない、ということを言ったのがこの論文。
+                ところでmonstrous moonshineのLeech lattice場合はConway群の拡大がsplitするかどうか知られているのか、とTさんがVOAの専門家の方にメールで聞いてくださったところ、splitしないはずだけど原論文はどこかな、とその方がまた別の方に連絡してくださって、
+                結局Griessが<a href="https://projecteuclid.org/journals/pacific-journal-of-mathematics/volume-48/issue-2/Automorphisms-of-extra-special-groups-and-nonvanishing-degree-2-cohomology/pjm/1102945424.full">1973年の論文</a>で
+                示していると分かったのだが、証明にはConway群のheavyな知識を使っているので、半分loreになっているのではという雰囲気だった。
+                自分の方法は、群とそのlatticeへの作用のデータを入力として、コンピュータを使って群の拡大の構造を愚直に調べるというものだったので、heavyな群論の知識は必要無く、実際にLeech latticeの場合にも例の拡大がsplitしないことを確認できた。
+                そういうわけで、latticeの対称性がlattice VOAの対称性になっていないことを示す良い手法を提示したという点において、個人的には悪くないと思っているのだが、
+                しかし数学者にしてみれば誰でもやればできるようなことではあり、物理学者にしてみれば何が大事か分かりにくいというような結果でもある。
+                Tさんには色々と教えていただいたり議論していただいたりしたが、寛大にも単著で良いと仰ってくださったので、ありがたく単著で投稿させていただいた。尤も、前述の通り、Tさんが名を連ねるほどの価値がある論文かというと実際微妙なところだと思う。
+                とはいえ単著を出せて嬉しかったし、M24の既約表現次元でありM23の最大の既約表現次元でもある2024年のうちにarXivに投稿できたのも良かった。
+            </dd>
+
+            <dt>
+                [<a href="https://arxiv.org/abs/2408.00861">2408.00861</a>] Notes on Characterizations of 2d Rational SCFTs: Algebraicity, Mirror Symmetry and Complex Multiplication
+            </dt>
+            <dd>
+                CMとRCFTについての2つの論文（<a href="#2205.10299">2205.10299</a>と<a href="#2212.13028">2212.13028</a>）をstreamlinedにして読みやすくし、弦理論屋向けのCM-type varietyに関するreviewを付けたもの。
+                journalにもこちらで載った。
+            </dd>
+
+            <dt>
+                [<a href="https://arxiv.org/abs/2403.20062">2403.20062</a>] Non-invertible symmetries act locally by quantum operations
+            </dt>
+            <dd>
+                場の理論において、有限群対称性の作用はユニタリ演算子で記述されるが、non-invertible symmetryの（local operatorへの）作用は何で記述されるのかについては、良い答えが知られていないということだった。
+                AQFTの枠組みでは、<a href="https://arxiv.org/abs/1608.00253">Bischoff</a>や<a href="https://arxiv.org/abs/2204.14105">その共著者ら</a>が「local conformal netへのhypergroupの作用はcompletely positive mapで書く」という形で定式化していて、
+                もっと言うとcompletely positive mapは量子情報理論におけるquantum operationの定式化にも使われている概念だった。
+                Tさんが「通常の場の理論の枠組みでは、non-invertible symmetryの作用がStinespring representationを表していると思えば、completely positive mapとして理解できる」というアイデアを教えてくださって、
+                しかし論文を書くにはKramers&ndash;Wannier dualityくらいで具体例の計算があった方が良いというお話をいただいたので、<a href="https://arxiv.org/abs/1601.07185">Aasen&ndash;Mong&ndash;Fendlyの論文</a>で計算方法をガーッと勉強して、具体的な計算を書いた。
+                というわけで、Tさんのアイデアがすごいのであって、自分はそれを有名な具体例で例示したというだけ。
+                内容的に一般化対称性と量子情報理論という2つのhot topicに関わっていることもあり、光栄なことにPRLのEditors' Suggestionに選ばれたので、IPMUからプレスリリースも出したのだが、それに関わる諸々の仕事くらいは私が積極的に引き受けようと思った記憶がある。
+            </dd>
+
+            <dt>
+                [<a href="https://arxiv.org/abs/2306.10282">2306.10282</a>] A note on varieties of weak CM-type
+            </dt>
+            <dd>
+                CM-type varietyというけれど、CM-typeはrational Hodge structureに課せる条件なので、varietyのcohomologyのHodge structureが複数のHodge substructureをもつ場合には、全部に課すのかどこか一部に課すのかという選択肢がある。
+                もし一部のCMから全部のCMが従うとすれば、そういう選択肢による違いは気にしなくてよくなるので、これまでのRCFTの研究でも嬉しい状況になる。
+                この論文では、aberian variety T^nに関してはlevel-n Hodge structureがCM-typeならばHodge structure全体もCM-typeであるということを、level-n Hodge structureの次元が2と4の場合に示した。
+                （実は最初、条件をかけ忘れていたせいで真逆の結論（上の主張に反例が存在するという結論）に到達してしまい、それで論文を書き始めていて危なかった。）
+                また、K3×T^2の場合にも同様の主張が成り立つとか、直積がweak CMなら各componentもweak CMとか、additionalな結果も示してある。
+                私がT^4の特定のケースについて、「2次式で書かれた4つの条件式を満たす16個の変数が係数に入っている8本の4元一次連立方程式が解をもつ」みたいな汚い証明を力ずくで示して持っていくと、
+                WさんがGalois群の作用を考えると見通しが良くなることを指摘し、
+                私がT^6の場合について線形代数の問題に落とし込んで証明をつけると、Wさんがその議論はT^nやK3×T^2にも使えることを指摘する、というような具合で進んだ。
+                俯瞰的な視点は大事だという教訓。
+            </dd>
+
+            <dt id="2212.13028">
+                [<a href="https://arxiv.org/abs/2212.13028">2212.13028</a>] Towards Hodge Theoretic Characterizations of 2d Rational SCFTs: II
+            </dt>
+            <dd>
+                前の論文(<a href="#2205.10299">2205.10299</a>)では、T^4 target CFTがrationalなときに成り立つGukov&ndash;Vafa-likeなstatementをいくつか課すだけでは、RCFTにならないCMなT^4を排除できないということだった。
+                この論文ではまず、全部課してもダメだということを確認した。標語的に言うと、RCFTならばCMだが、CMならばRCFTという主張には反例がある、ということになった。
+                ではCMにどんな条件を付け加えればRCFTの必要十分条件になるか、という問題になるが、
+                これは（少なくともT^nの場合には）mirrorを記述する<a href="https://arxiv.org/abs/hep-th/9606040">Strominger–Yau–Zaslow fibration</a>という言葉を使ってうまく書き表せる条件を課せば良いということが分かった。
+                本当にこれがT^4だけでなく一般のself-mirror manifoldでRCFTと必要十分になるとしたら結構すごいというか良い結果だと思う。
+                （それにしても、mirror symmetryもその後N先輩と一緒に勉強したりしたけれど、結局難しくてあまり理解できなかったなあと思う。）
+            </dd>
+
+            <dt>
+                [<a href="https://arxiv.org/abs/2208.05495">2208.05495</a>] Asymptotic density of states in 2d CFTs with non-invertible symmetries
+            </dt>
+            <dd>
+                修士のテーマがRCFTに決まったのは良いが、数学的にはどういう枠組みで議論されるのだろう、と思って河東先生の全5回の<a href="https://ocw.kyoto-u.ac.jp/course/999/">講義アーカイブ</a>を視聴した（この講義は本当にすごい）。
+                当時は勉強し始めだったので、2d CFTがここまでしっかりと数学に繋がっているとは知らず、こんなに色々と議論されているなら数学の結果（それこそ<a href="https://arxiv.org/abs/math/9903104">Kawahigashi&ndash;Longo&ndash;Müger</a>のrationalityの条件とか）を物理の言葉に翻訳すれば新しい知見が得られるのではないか、とTさんにメールでご質問した。
+                すると、最近<a href="https://arxiv.org/abs/2109.03838">Harlow&ndash;Ooguri</a>が一般のQFTで成り立つと予想した、有限群対称性の各表現に属する状態の密度の漸近公式が、
+                <a href="https://arxiv.org/abs/2111.02418">Magán</a>や<a href="https://arxiv.org/abs/2110.11358">Casini</a>によってAQFTの言葉で証明されているから、それを有限群からfusion categoryに一般化するのは可能なはず、と教えていただいた。
+                実際には、我々も頑張ってAQFTを使ったわけではなく、Harlow&ndash;Ooguri以前に<a href="https://arxiv.org/abs/2004.12557">Pal&ndash;Sun</a>がCFTの有限群対称性の場合にmodular invarianceを使って示しているので、それをfusion categoryの場合に拡張できれば良いということになった。
+                modular tensor categoryの場合は知られている公式を組み合わせるとできたが、一般のfusion categoryの場合はtube algebraというのを使う必要があり、それはSさんとYさんがよくご存知だということで、この論文ができあがった。
+                修士の学生にもできそうなところだけ参加させていただけたなあと思って感謝している。図らずも当時流行っていたnon-invertible symmetryの勉強にもなった
+                （が、未だに自分はgeneralized symmetryを理解しているということに抵抗がある、全ての概念にきちんとした定義を与えながら人に説明できる自信はない、まあ物理は多かれ少なかれそういうものなのかもしれないが......）。
+            </dd>
+
+            <dt id="2205.10299">
+                [<a href="https://arxiv.org/abs/2205.10299">2205.10299</a>] Towards Hodge Theoretic Characterizations of 2d Rational SCFTs
+            </dt>
+            <dd>
+                <a href="https://arxiv.org/abs/hep-th/0203213">Gukov&ndash;Vafaの論文</a>で、target space Mの2d CFTがrationalであることと、Mとそのmirror manifoldが同じ代数体に関してCM-typeであることが同値であるという予想（数学的にはconjectureではなくproposalというべきかもしれない）がある。
+                彼らは主にMがcomplex 1-tori T^2の場合にこの予想を証明したが、一般の多様体に拡張しようと思ったら、そもそも予想のstatementを数学的にwell-definedに書き下す段階で色々とsubtletyがある。
+                そこで、MがT^4の場合についてきちんと調べて、良さそうなstatementを検証しましょうというモチベーションのプロジェクト。
+                具体的には、CMなT^4は4種類に分類できることが知られているので、それぞれがRCFTになるかどうかを調べた。WさんとAさんが4つの分類のうち3つは終わらせていて、残りの1つをやるところから修士の研究が始まった。
+                結論としては、T^4 target CFTがrationalならT^4はCMだが、CMなT^4でもRCFTにならないケースがあることが分かった。
+                （もう少し厳密に言うと、T^4 target CFTがrationalなときに成り立つGukov&ndash;Vafa-likeなstatementをいくつか取り出して、その一部を課すだけでは排除できないような、RCFTにならないCMなT^4が存在することが分かった。）
+            </dd>
+        </dl>
+    </body>
+</html>

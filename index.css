@@ -1,19 +1,6 @@
-ul {
-  list-style: none;
-  padding-left: 2.2em;
-}
-
 li {
   margin: 20pt 0;
-  position: relative;
-  line-height: 1.5;
-}
-
-li::before {
-  content: "・";
-  position: absolute;
-  left: -1.2em;
-  line-height: 1.5;
+  line-height: 1.5; /* Prevents bullets from shifting upward on mobile */
 }
 
 

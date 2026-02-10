@@ -1,6 +1,11 @@
+ul {
+  /* Prevents bullets from shifting upward on mobile */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 li {
   margin: 20pt 0;
-  line-height: 1.5; /* Prevents bullets from shifting upward on mobile */
 }
 
 
